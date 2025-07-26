@@ -20,14 +20,13 @@ compound-risk-scoring/
 
 ## 🚀 How to Run
 
-1. Clone the repo & install dependencies:
+### 1. Clone the repo & install dependencies:
 
-```bash
-pip install pandas requests matplotlib seaborn```
+`pip install pandas requests matplotlib seaborn`
 
-2. Make sure you have a valid **Moralis API key**.
+### 2. Make sure you have a valid **Moralis API key**.
 
-3. Run the notebook/script that: 
+### 3. Run the notebook/script that: 
 
 - Loads wallet list 
 - Fetches transaction history 
@@ -52,7 +51,8 @@ pip install pandas requests matplotlib seaborn```
 - `unique_tokens` 
 - `total_amount` - `avg_value` 
 - `recent_txn_days` 
-- `log_total_amount` (added for scoring robustness) 
+- `log_total_amount` (added for scoring robustness)
+
 - ✅ `analysis.md` with visualizations and analysis of score behavior. 
 
 --- 
@@ -66,6 +66,7 @@ pip install pandas requests matplotlib seaborn```
 
 ### 2. Feature Selection Rationale 
 We computed wallet-level indicators that reflect user behavior: 
+
 | Feature | Description | 
 |-----------------------------------------|---------------------|
 | `num_transactions` | Number of ERC20 transfers (signal of activity) |
@@ -77,6 +78,7 @@ We computed wallet-level indicators that reflect user behavior:
 
 ### 3. Scoring Logic 
 We compute a weighted score based on normalized features: 
+
 - Positively Weighted: 
 - `num_transactions` 
 - `unique_tokens` 
@@ -95,7 +97,8 @@ Final score is scaled to **0–1000** and clipped to stay within bounds.
 
 ---
 
-## 📊 Score Distribution ![Score Distribution](score_distribution_analysis.png) 
+## 🔍 Analysis
+See [analysis.md] for distribution plots and behavioral insights.
 
 ---
 
