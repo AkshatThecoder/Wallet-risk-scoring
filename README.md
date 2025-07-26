@@ -38,22 +38,23 @@ compound-risk-scoring/
 
 ## 📦 Deliverables 
 
-- ✅ `wallet_scores_updated.csv` with columns: 
+- ✅ `wallet_scores_updated.csv` with columns:
+```
 | wallet_id | score | 
 |-----------|-------| 
 | 0xfaa0... | 732 | 
 | 0x0039... | 615 |
-| 0x06b5... | 36  | 
+| 0x06b5... | 36  |
+````
 
 
-- ✅ `wallet_features.csv` with features: 
+- ✅ `wallet_features.csv` with features:
 - `num_transactions` 
 - `unique_tokens` 
 - `total_amount` - `avg_value` 
 - `recent_txn_days` 
 - `log_total_amount` (added for scoring robustness)
-
-- ✅ `analysis.md` with visualizations and analysis of score behavior. 
+- `analysis.md` with visualizations and analysis of score behavior. 
 
 --- 
 
